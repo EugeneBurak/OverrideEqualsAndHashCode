@@ -22,8 +22,12 @@ public class OverrideEqualsAndHashCode {
             return false;
         }
         //You can finish here, if it does not matter what's inside.
+        if (!(o instanceof OverrideEqualsAndHashCode)) {
+            return false;
+        }
         OverrideEqualsAndHashCode over = (OverrideEqualsAndHashCode) o;
         return id == over.id && name.equals(over.name);
+
     }
 
     @Override
