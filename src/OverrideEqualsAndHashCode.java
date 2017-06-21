@@ -33,8 +33,9 @@ public class OverrideEqualsAndHashCode {
     @Override
     public  int hashCode()  {
         final int PRIME = 31;
-        int result = 1;
+        int result = 17;
         result = PRIME*result + id;
+        result = PRIME*result + name.hashCode();
         return result;
     }
 }
